@@ -1,0 +1,9 @@
+project: savantenvs/libuvc
+target: fuzz_descriptor
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_descriptor/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_descriptor
+    libfuzzer: true
+    timeout: 5
